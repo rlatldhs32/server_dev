@@ -12,10 +12,13 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlp atterns:  path('blog/', include('blog.urls'))
-"""
+"""#w장고는 실제로 여길 쳐다봄,
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 
+
+#머머머/login/머시기
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', include('login.urls'))  #메인폴더에서의 path가 연결해줌
 ]
