@@ -20,5 +20,6 @@ from django.urls import path,include
 #머머머/login/머시기
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', include('login.urls'))  #메인폴더에서의 path가 연결해줌
+    path('login/', include('login.urls')),  #메인폴더에서의 path가 연결해줌
+    path('todo/',include('todo.urls')),
 ]
