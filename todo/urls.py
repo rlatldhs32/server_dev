@@ -9,6 +9,7 @@ urlpatterns = [
     re_path('select', views.TaskSelect.as_view(), name='select'),
     re_path('toggle', views.TaskToggle.as_view(), name='toggle'),
     re_path('delete', views.TaskDelete.as_view(), name='delete'),
-    re_path('',views.Todo.as_view(),name='todo'),
+    re_path('test', views.Test.as_view(), name='test'),
 
+    #re_path('',views.Todo.as_view(),name='todo'),
 ]
