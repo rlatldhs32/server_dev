@@ -7,11 +7,19 @@ from .models import Task
 from rest_framework.response import Response
 from datetime import datetime
 from django.shortcuts import render
-from common.common import TodoView, SuccessResponseWithData, SuccessResponse
+from common.common import TodoView, SuccessResponseWithData, SuccessResponse,CommonResponse
 
+import logging
 
+logger = logging.getLogger(__name__)
 #render : 화면에 뿌리는거
 # ~/todo/views.py
+class Test(TodoView):
+    def post(self,request):
+        print(self.user_id)
+        logger.error("this is eror!"+self.user_id)
+        return CommonResponse(0,'success',dict(some_data="some_value"))
+
 
 class TaskCreate(TodoView):
     def post(self, request):
